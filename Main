@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class main {
+    static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("=====THỬ NGHIỆM TÍNH NĂNG SMART SPEAKER=====");
+        System.out.println("Nhập tên thiết bị: ");
+        String deviceName = sc.nextLine();
+        System.out.println("Nhập tên bài hát: ");
+        String trackName = sc.nextLine();
+        System.out.println("Nhập thời gian ghi âm: ");
+        int durationSecond = Integer.parseInt(sc.nextLine());
+        SmartSpeak smartSpeak = new SmartSpeak(deviceName);
+        System.out.println("======NHẬT KÝ ĐIỀU KHIỂN LOA THÔNG MINH======");
+        System.out.println("Thiết bị: " + smartSpeak.getDeviceName());
+        smartSpeak.playAudio(trackName);
+        smartSpeak.recordVoice(durationSecond);
+    }
+}
