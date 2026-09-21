@@ -1,0 +1,21 @@
+public class SmartSpeak implements IPlayable, IRecordable{
+    private String deviceName;
+
+    public SmartSpeak(String deviceName) {
+        this.deviceName = deviceName;
+    }
+
+    public String getDeviceName() {
+        return deviceName;
+    }
+
+    @Override
+    public void playAudio(String trackName) {
+        System.out.println("Phát bài hát" + trackName);
+    }
+
+    @Override
+    public void recordVoice(int durationSeconds) {
+        System.out.println("Ghi âm lời thoại" +durationSeconds);
+    }
+}
